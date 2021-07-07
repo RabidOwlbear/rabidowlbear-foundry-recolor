@@ -3,10 +3,13 @@
     "title": "Recolor Everything",
     "description": "Ditch the orange glow.",
     "author": "RabidOwlbear",
-    "version": "0.0.02",
+    "version": "0.0.03",
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "0.8.6",
     "styles": ["./styles/recolor.css"],
+    "esmodules": [
+        "./script/main.js"
+    ],
     "url": "https://github.com/RabidOwlbear/my-fvtt-recolor",
     "manifest": "https://github.com/RabidOwlbear/my-fvtt-recolor/raw/master/module.json",
     "download": "https://github.com/RabidOwlbear/my-fvtt-recolor/archive/refs/heads/master.zip",
