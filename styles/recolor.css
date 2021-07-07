@@ -1,0 +1,308 @@
+/*--------------------------------*/
+/* color variables */
+/*--------------------------------*/
+
+:root {
+    --main-color: rgb(51, 175, 103);
+    /* primary color formerly prange*/
+    --bright-color: rgb(30, 250, 150);
+    /*secondary color formerly red*/
+    --dark-color: rgb(39, 128, 90);
+    /*tertiary color formerly dark orange*/
+    --dark-alt-color: rgb(39, 100, 100);
+    /*alternate tertiary color */
+    --glow-color: rgb(0, 210, 140);
+    /*glow color  formerly orange*/
+}
+
+/*--------------------------------*/
+/* shrink scene display */
+/*--------------------------------*/
+
+#scenes .scene h3 {
+    line-height: 50px;
+}
+
+#scenes .scene {
+    line-height: 50px;
+    height: 50px;
+}
+
+/*--------------------------------*/
+/* journal styling */
+/*--------------------------------*/
+.journal-sheet p {
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 5px 0;
+
+}
+
+.journal-sheet .window-content {
+    background: none;
+    background-color: #ddd;
+}
+
+.journal-sheet .entity-link {
+    background-color: #97c8d1;
+    /* color: white; */
+
+}
+
+.journal-sheet table {
+    background-color: rgba(117, 201, 173, 0.377);
+}
+
+/*--------------------------------*/
+/* general styling */
+/*--------------------------------*/
+
+/* custom hotbar */
+
+#custom-hotbar .macro:hover {
+    box-shadow: 0 0 10px var(--main-color) inset !important;
+}
+
+a[href] {
+    color: var(--main-color) !important;
+
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--bright-color) !important;
+}
+
+/* ----------------------------------------- */
+/* Scrollbar
+  /* ----------------------------------------- */
+::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: var(--dark-alt-color) !important;
+    border: 1px solid var(--main-color) !important;
+}
+
+:root {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-alt-color) #111 !important;
+}
+
+/* ----------------------------------------- */
+/*  Player Config UI
+  /* ----------------------------------------- */
+#player-config .directory-item.context {
+    border-top: 1px solid var(--bright-color) !important;
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 0 10px var(--main-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  Connected Players UI
+  /* ----------------------------------------- */
+
+#players ol .player.context {
+    margin: -1px 0;
+    border-top: 1px solid var(--main-color) !important;
+    border-bottom: 1px solid var(--main-color) !important;
+}
+
+#players ol .player.context .player-name {
+    text-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+/* ---------------------------------------- */
+
+/* Form Inputs                              */
+/* ---------------------------------------- */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    box-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+select:focus {
+    box-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+textarea:focus {
+    box-shadow: 0 0 6px var(--bright-color) !important;
+}
+
+button:hover,
+button:focus {
+    box-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: var(--dark-color) !important;
+
+}
+
+input[type=range]::-moz-range-thumb {
+    background: var(--dark-color) !important;
+
+}
+
+/* ----------------------------------------- */
+/* Tabbed Containers
+  /* ----------------------------------------- */
+.tabs .item.active {
+    text-shadow: 0 0 10px var(--bright-color) !important;
+}
+
+/* ----------------------------------------- */
+/* File Picker
+  /* ----------------------------------------- */
+.filepicker .directory>li:hover {
+    text-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+.filepicker .tiles-list li.picked {
+    box-shadow: 0 0 6px inset var(--main-color) !important;
+}
+
+.filepicker .display-modes a.active {
+    text-shadow: 0 0 6px var(--main-color) !important;
+}
+
+/* ----------------------------------------- */
+/* Tabbed Containers
+  /* ----------------------------------------- */
+.tabs .item.active {
+    text-shadow: 0 0 10px var(--bright-color) !important;
+}
+
+/* ----------------------------------------- */
+/* File Picker
+  /* ----------------------------------------- */
+.filepicker .directory>li:hover {
+    text-shadow: 0 0 5px var(--bright-color) !important;
+}
+
+.filepicker .tiles-list li.picked {
+    box-shadow: 0 0 6px inset var(--main-color) !important;
+}
+
+.filepicker .display-modes a.active {
+    text-shadow: 0 0 6px var(--main-color) !important;
+}
+
+/* ---------------------------------------- */
+/* Token HUD
+  /* ---------------------------------------- */
+
+#token-hud .status-effects .effect-control.overlay {
+    border: 1px solid var(--main-color) !important;
+}
+
+/* ---------------------------------------- */
+/* Chat Bubbles
+  /* ---------------------------------------- */
+
+#navigation #nav-toggle:hover {
+    text-shadow: 0 0 10px var(--main-color) !important;
+}
+
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.context {
+    border: 1px solid var(--bright-color);
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 0 10px var(--main-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  Main Menu
+  /* ----------------------------------------- */
+
+#menu #menu-items li:hover {
+    text-shadow: 0 0 10px var(--main-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  Scene Controls
+  /* ----------------------------------------- */
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+    border: 1px solid var(--bright-color);
+    border-bottom: 1px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+#controls .control-tool:hover {
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 0 10px var(--main-color) !important;
+}
+
+/* ---------------------------------------- */
+/*  Hotbar                                  */
+/* ---------------------------------------- */
+
+#hotbar .macro:hover {
+    box-shadow: 0 0 10px var(--main-color) inset !important;
+    border: 1px solid var(--main-color) !important;
+}
+
+/* ---------------------------------------- */
+/*  PRIMARY SIDEBAR                         */
+/* ---------------------------------------- */
+
+#sidebar-tabs {
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 0 10px var(--bright-color) !important;
+}
+
+#sidebar-tabs>.item.active {
+    border: 1px solid var(--bright-color) !important;
+    box-shadow: 0 0 6px inset var(--main-color) !important;
+}
+
+.directory .directory-list .directory-item.folder .context {
+    background-color: transparent !important;
+    border-color: var(--main-color) !important;
+}
+
+.directory .directory-list .directory-item.context,
+.directory .directory-list .directory-item.active {
+    border-color: var(--main-color) !important;
+}
+
+#sidebar.collapsed #sidebar-tabs>.item.active {
+    border-bottom: 1px solid var(--bright-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  Folders and Sub-folders
+  /* ----------------------------------------- */
+
+li.folder.droptarget>header h3 i {
+    text-shadow: 0 0 4px var(--bright-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  1.0 - Chat Panel
+  /* ----------------------------------------- */
+
+.notification-pip {
+    color: var(--main-color) !important;
+}
+
+/* ----------------------------------------- */
+/*  3.0 - Scenes Directory
+  /* ----------------------------------------- */
+
+#scenes .scene.context,
+#scenes .scene.active {
+    box-shadow: 0 0 10px var(--main-color) !important;
+}
+
+
+.window-header {
+    background-color: var(--header-color);
+}
