@@ -3,15 +3,15 @@
 /*--------------------------------*/
 
 :root {
-    --main-color: rgb(51, 175, 103);
+    --main-color: rgb(175, 51, 123);
     /* primary color formerly prange*/
-    --bright-color: rgb(30, 250, 150);
+    --bright-color: rgb(250, 30, 184);
     /*secondary color formerly red*/
-    --dark-color: rgb(39, 128, 90);
+    --dark-color: rgb(107, 39, 128);
     /*tertiary color formerly dark orange*/
-    --dark-alt-color: rgb(39, 100, 100);
+    --dark-alt-color: rgb(55, 39, 100);
     /*alternate tertiary color */
-    --glow-color: rgb(0, 210, 140);
+    --glow-color: rgb(210, 0, 116);
     /*glow color  formerly orange*/
 }
 
@@ -305,4 +305,56 @@ li.folder.droptarget>header h3 i {
 
 .window-header {
     background-color: var(--header-color);
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+/* dice tray module override*/
+/*------------------------------------------------------------------------------------------------*/
+
+.dice-tray button:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.dice-tray button:hover svg * {
+    fill: var(--main-color);
+}
+
+.dice-tray button.dice-tray__math--sub:hover {
+    background: var(--dark-alt-color);
+    -webkit-box-shadow: 0 0 6px inset var(--main-color);
+    box-shadow: 0 0 6px inset var(--main-color);
+    color: white;
+}
+
+.dice-tray button.dice-tray__roll:hover {
+    background: var(--glow-color);
+
+}
+
+.dice-tray button.dice-tray__disadvantage:hover,
+.dice-tray button.dice-tray__disadvantage.active {
+    background: var(--main-color);
+    -webkit-box-shadow: 0 0 6px inset var(--main-color);
+    box-shadow: 0 0 6px inset var(--main-color);
+
+}
+
+.dice-tray button .dice-tray__flag {
+
+    background-color: var(--main-color);
+
+}
+
+.dice-tray button .dice-tray__flag:hover,
+.dice-tray button .dice-tray__flag:focus {
+    background-color: var(--main-color);
+}
+
+.dice-tray input[type="text"]:hover,
+.dice-tray input[type="text"]:focus {
+    border: 1px solid var(--main-color);
+    -webkit-box-shadow: 0 0 6px inset var(--main-color);
+    box-shadow: 0 0 6px inset var(--main-color);
 }
