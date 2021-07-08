@@ -2,6 +2,14 @@
 const logo = document.querySelector('#logo');
 logo.src = 'modules/rabidowlbear-foundry-recolor/image/fvtt-pink.png';
 console.log('logo', logo);
-const pauseImg = document.querySelector('#pause img');
-console.log('pauseImg', pauseImg);
-pauseImg.src = 'modules/rabidowlbear-foundry-recolor/image/skele-pause.webp';
+
+Hooks.on('renderPause', (app, html, options) => {
+	if (options.paused) {
+		//html.find("img")[0].src = (game.settings.get("custom-pause", "chooseFile"))
+		document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/skele-pause.webp-a';
+	}
+});
+
+// const pauseImg = document.querySelector('#pause img');
+// console.log('pauseImg', pauseImg);
+// pauseImg.src = 'modules/rabidowlbear-foundry-recolor/image/skele-pause.webp';
