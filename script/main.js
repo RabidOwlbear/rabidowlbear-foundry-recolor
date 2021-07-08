@@ -1,6 +1,6 @@
 //change foundry logo
 const logo = document.querySelector('#logo');
-logo.src = 'modules/rabidowlbear-foundry-recolor/image/fvtt-logo-a.webp';
+logo.src = 'modules/rabidowlbear-foundry-recolor/image/fvtt-logo-b.webp';
 console.log('logo', logo);
 
 Hooks.on('renderPause', (app, html, options) => {
