@@ -3,7 +3,7 @@
     "title": "RabidOwlbear Recolor Everything",
     "description": "Ditch the orange glow.",
     "author": "RabidOwlbear",
-    "version": "0.0.03",
+    "version": "0.0.04",
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "0.8.6",
     "styles": ["./styles/recolor.css"],
