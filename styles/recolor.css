@@ -473,7 +473,8 @@ li.folder.droptarget>header h3 i {
 }
 
 #pause.paused h3 {
-    font: 4em Indelible;
+    font-family: 'Indelible';
+    font-size: 4em;
     color: var(--main-color);
     animation: pulsate 2.5s infinite alternate;
 
