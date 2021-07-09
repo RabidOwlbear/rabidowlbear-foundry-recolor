@@ -5,7 +5,8 @@
 
 @font-face {
     font-family: "Indelible";
-    src: url("./fonts/Indelble.otf");
+    /* src: url("./fonts/Indelble.otf"); */
+    src: local("Indelible"), url("./fonts/Road_Rage.otf"), format("otf");
 }
 
 /*--------------------------------*/
