@@ -8,12 +8,8 @@ const logoSub = document.createElement('h4');
 pauseDiv.appendChild(logoSub);
 
 Hooks.on('renderPause', (app, html, options) => {
-	if (options.paused) {
-		//html.find("img")[0].src = (game.settings.get("custom-pause", "chooseFile"))
-		document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/80sRing.webp';
-	}
+    if (options.paused) {
+        //html.find("img")[0].src = (game.settings.get("custom-pause", "chooseFile"))
+        document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/80sRing.webp';
+    }
 });
-
-// const pauseImg = document.querySelector('#pause img');
-// console.log('pauseImg', pauseImg);
-// pauseImg.src = 'modules/rabidowlbear-foundry-recolor/image/skele-pause.webp';

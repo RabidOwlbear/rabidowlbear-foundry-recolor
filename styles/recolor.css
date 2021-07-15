@@ -1,12 +1,17 @@
 @font-face {
     font-family: "Road Rage";
-    src: url("./fonts/Road_Rage.otf");
+    src: url("../fonts/Road_Rage.otf");
 }
 
 @font-face {
     font-family: "Indelible";
     /* src: url("./fonts/Indelble.otf"); */
-    src: local("Indelible"), url("./fonts/Road_Rage.otf"), format("otf");
+    src: url("../fonts/Indelible.otf");
+}
+
+@font-face {
+    font-family: "Still Time";
+    src: url("../fonts/still-time.ttf"), format("ttf");
 }
 
 /*--------------------------------*/
@@ -387,8 +392,13 @@ li.folder.droptarget>header h3 i {
 }
 
 #pause.paused img {
-    top: -25px;
+    top: -50px;
+    left: 46.5%;
+    height: 200px;
+    width: 200px;
+
     -webkit-animation: rotation 25s infinite linear;
+    animation: rotation 25s infinite linear;
 }
 
 
@@ -473,11 +483,15 @@ li.folder.droptarget>header h3 i {
     }
 }
 
+#pause {
+    background: url('');
+}
+
 #pause.paused h3 {
-    font-family: 'Indelible';
-    font-size: 4em;
+    font-family: 'Still Time';
+    font-size: 6em;
     color: var(--main-color);
-    animation: pulsate 2.5s infinite alternate;
+    animation: flicker 2.5s infinite alternate;
 
 
 
