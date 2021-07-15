@@ -1,6 +1,10 @@
 @font-face {
-    font-family: "Still Time";
-    src: url("../fonts/still-time.ttf"), format("ttf");
+    font-family: 'still_time';
+    src: url('../fonts/still-time-webfont.woff2') format('woff2'),
+        url('../fonts/still-time-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /*--------------------------------*/
@@ -477,7 +481,7 @@ li.folder.droptarget>header h3 i {
 }
 
 #pause.paused h3 {
-    font-family: 'Still Time';
+    font-family: 'still_time';
     font-size: 6em;
     color: var(--main-color);
     animation: flicker 2.5s infinite alternate;
