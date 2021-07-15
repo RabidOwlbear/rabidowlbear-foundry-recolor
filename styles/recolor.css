@@ -1,15 +1,4 @@
 @font-face {
-    font-family: "Road Rage";
-    src: url("../fonts/Road_Rage.otf");
-}
-
-@font-face {
-    font-family: "Indelible";
-    /* src: url("./fonts/Indelble.otf"); */
-    src: url("../fonts/Indelible.otf");
-}
-
-@font-face {
     font-family: "Still Time";
     src: url("../fonts/still-time.ttf"), format("ttf");
 }
