@@ -384,9 +384,17 @@ li.folder.droptarget>header h3 i {
     /* background-image: url() !important; */
 }
 
+/* pause */
+
+#pause.paused {
+    display: flex;
+    justify-content: center;
+}
+
+
 #pause.paused img {
     top: -50px;
-    left: 46.5%;
+    left: auto;
     height: 200px;
     width: 200px;
 
