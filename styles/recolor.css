@@ -12,17 +12,15 @@
 /*--------------------------------*/
 
 :root {
-    --main-color: rgb(175, 51, 123);
-    /* primary color formerly prange*/
-    --bright-color: rgb(250, 30, 184);
-    /*secondary color formerly red*/
-    --dark-color: rgb(107, 39, 128);
-    /*tertiary color formerly dark orange*/
-    --dark-alt-color: rgb(55, 39, 100);
-    /*alternate tertiary color */
-    --glow-color: rgb(210, 0, 116);
-    --sidebar-color: rgba(210, 0, 116, 0.3);
-    --pause-glow: rgb(5, 194, 219);
+    --main-color: '';
+    --bright-color: '';
+    --dark-color: '';
+    --darkAlt-color: '';
+    --glow-color: '';
+    --sidebar-color: '';
+    --pause-color: '';
+    --header-color: '';
+    --flicker: ;
 }
 
 /*--------------------------------*/
@@ -91,13 +89,13 @@ a:hover {
 ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 3px;
-    background: var(--dark-alt-color) !important;
+    background: var(--darkAlt-color) !important;
     border: 1px solid var(--main-color) !important;
 }
 
 :root {
     scrollbar-width: thin;
-    scrollbar-color: var(--dark-alt-color) #111 !important;
+    scrollbar-color: var(--darkAlt-color) #111 !important;
 }
 
 /* ----------------------------------------- */
@@ -332,7 +330,7 @@ li.folder.droptarget>header h3 i {
 }
 
 .dice-tray button.dice-tray__math--sub:hover {
-    background: var(--dark-alt-color);
+    background: var(--darkAlt-color);
     -webkit-box-shadow: 0 0 6px inset var(--main-color);
     box-shadow: 0 0 6px inset var(--main-color);
     color: white;
@@ -401,7 +399,19 @@ li.folder.droptarget>header h3 i {
     -webkit-animation: rotation 25s infinite linear;
     animation: rotation 25s infinite linear;
 }
+#pause {
+    background: url('');
+}
 
+#pause.paused h3 {
+    font-family: 'still_time';
+    font-size: 6em;
+    color: var(--main-color);
+    animation: var(--flicker);
+
+
+
+}
 
 @keyframes glowing {
     0% {
@@ -442,11 +452,11 @@ li.folder.droptarget>header h3 i {
             0 0 4px #fff,
             0 0 11px #fff,
             0 0 13px #fff,
-            0 0 16px var(--pause-glow),
-            0 0 18px var(--pause-glow),
-            0 0 20px var(--pause-glow),
-            0 0 35px var(--pause-glow),
-            0 0 40px var(--pause-glow);
+            0 0 16px var(--pause-color),
+            0 0 18px var(--pause-color),
+            0 0 20px var(--pause-color),
+            0 0 35px var(--pause-color),
+            0 0 40px var(--pause-color);
     }
 
     20%,
@@ -463,11 +473,11 @@ li.folder.droptarget>header h3 i {
             0 0 4px #fff,
             0 0 11px #fff,
             0 0 19px #fff,
-            0 0 40px var(--pause-glow),
-            0 0 80px var(--pause-glow),
-            0 0 90px var(--pause-glow),
-            0 0 100px var(--pause-glow),
-            0 0 150px var(--pause-glow);
+            0 0 40px var(--pause-color),
+            0 0 80px var(--pause-color),
+            0 0 90px var(--pause-color),
+            0 0 100px var(--pause-color),
+            0 0 150px var(--pause-color);
     }
 
     0% {
@@ -476,24 +486,11 @@ li.folder.droptarget>header h3 i {
             0 0 2px #fff,
             0 0 4px #fff,
             0 0 6px #fff,
-            0 0 10px var(--pause-glow),
-            0 0 45px var(--pause-glow),
-            0 0 55px var(--pause-glow),
-            0 0 70px var(--pause-glow),
-            0 0 80px var(--pause-glow);
+            0 0 10px var(--pause-color),
+            0 0 45px var(--pause-color),
+            0 0 55px var(--pause-color),
+            0 0 70px var(--pause-color),
+            0 0 80px var(--pause-color);
     }
 }
 
-#pause {
-    background: url('');
-}
-
-#pause.paused h3 {
-    font-family: 'still_time';
-    font-size: 6em;
-    color: var(--main-color);
-    animation: flicker 2.5s infinite alternate;
-
-
-
-}
