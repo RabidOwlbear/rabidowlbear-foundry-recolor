@@ -6,8 +6,8 @@ const defColor = {
     darkAlt: '#372764',
     glow: ' #d20074',
     pause: '#05c2db',
-    side: '#rgba(54, 0, 30, 0.514)',
-    header: 'rgba(110, 1, 86, 0.431)'
+    side: 'rgba(46, 0, 51, 0.719)',
+    header: 'rgba(110, 1, 86, 0.5)'
   },
   foundry: {
     main: '#ff6400',
@@ -16,13 +16,14 @@ const defColor = {
     dark: '#782e22',
     side: '#222222'
   },
-  pauseGlow: 'flicker 2.5s infinite alternate'
+  pauseGlow: 'flicker 2.5s infinite alternate',
+  pauseGlowAlt: `0 0 40px var(--pause-color)`
 };
 
 //change foundry logo
 const logo = document.querySelector('#logo');
 logo.src = 'modules/rabidowlbear-foundry-recolor/image/fvtt-logo-b.webp';
-console.log('logo', logo);
+// console.log('logo', logo);
 //add text logo to pause div
 const pauseDiv = document.querySelector('#pause');
 const logoSub = document.createElement('h4');
@@ -64,7 +65,7 @@ function refresh() {
     document.documentElement.style.setProperty('--bright-color', defColor.foundry.bright);
     document.documentElement.style.setProperty('--dark-color', defColor.foundry.dark);
     document.documentElement.style.setProperty('--glow-color', defColor.foundry.glow);
-    document.documentElement.style.setProperty('--side-color', defColor.foundry.side);
+    document.documentElement.style.setProperty('--sidebar-color', defColor.foundry.side);
     pauseToggle();
   } else {
     document.documentElement.style.setProperty('--main-color', defColor.module.main);
@@ -73,7 +74,7 @@ function refresh() {
     document.documentElement.style.setProperty('--darkAlt-color', defColor.module.darkAlt);
     document.documentElement.style.setProperty('--glow-color', defColor.module.glow);
     document.documentElement.style.setProperty('--pause-color', defColor.module.pause);
-    document.documentElement.style.setProperty('--side-color', defColor.module.side);
+    document.documentElement.style.setProperty('--sidebar-color', defColor.module.side);
     document.documentElement.style.setProperty('--header-color', defColor.module.header);
     pauseToggle();
   }
@@ -81,7 +82,9 @@ function refresh() {
 function pauseToggle() {
   if (game.settings.get('rabidowlbear-foundry-recolor', 'disableGlow')) {
     document.documentElement.style.setProperty('--flicker', '');
+    document.documentElement.style.setProperty('--pause-glow', defColor.pauseGlowAlt)
   } else {
     document.documentElement.style.setProperty('--flicker', defColor.pauseGlow);
+    document.documentElement.style.setProperty('--pause-glow', 'none')
   }
 }

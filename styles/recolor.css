@@ -4,7 +4,6 @@
         url('../fonts/still-time-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /*--------------------------------*/
@@ -21,6 +20,8 @@
     --pause-color: '';
     --header-color: '';
     --flicker: ;
+    --pause-glow: ;
+    --font-family: ;
 }
 
 /*--------------------------------*/
@@ -408,6 +409,7 @@ li.folder.droptarget>header h3 i {
     font-size: 6em;
     color: var(--main-color);
     animation: var(--flicker);
+    text-shadow: var(--pause-glow);
 
 
 
