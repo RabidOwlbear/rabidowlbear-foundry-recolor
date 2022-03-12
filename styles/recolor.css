@@ -25,6 +25,12 @@
 }
 
 /*--------------------------------*/
+/* Left Panel Controls        */
+/*--------------------------------*/
+#controls li.scene-control.active{
+
+}
+/*--------------------------------*/
 /* shrink scene display */
 /*--------------------------------*/
 
@@ -239,9 +245,9 @@ input[type=range]::-moz-range-thumb {
 #controls .control-tool.active,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    border: 1px solid var(--bright-color);
-    border-bottom: 1px solid var(--main-color);
-    box-shadow: 0 0 10px var(--main-color);
+    border: 1px solid var(--bright-color) !important; 
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 0 10px var(--main-color) !important;
 }
 
 #controls .control-tool:hover {

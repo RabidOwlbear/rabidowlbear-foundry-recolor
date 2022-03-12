@@ -55,7 +55,7 @@ Hooks.once('ready', refresh);
 Hooks.on('renderPause', (app, html, options) => {
   if (options.paused) {
     //html.find("img")[0].src = (game.settings.get("custom-pause", "chooseFile"))
-    document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/80sRing.webp';
+    document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/80sring.webp';
   }
 });
 
