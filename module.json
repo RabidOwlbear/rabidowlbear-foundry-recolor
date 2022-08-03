@@ -5,7 +5,7 @@
     "author": "RabidOwlbear",
     "version": "0.0.4",
     "minimumCoreVersion": "8",
-    "compatibleCoreVersion": "9",
+    "compatibleCoreVersion": "10",
     "styles": ["./styles/recolor.css"],
     "scripts": [
         "./scripts/main.js"

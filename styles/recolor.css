@@ -410,7 +410,8 @@ li.folder.droptarget>header h3 i {
     background: url('');
 }
 
-#pause.paused h3 {
+#pause.paused h3,
+#pause.paused figcaption {
     font-family: 'still_time';
     font-size: 6em;
     color: var(--main-color);
