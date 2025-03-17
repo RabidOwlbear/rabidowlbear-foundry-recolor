@@ -22,14 +22,32 @@
     --flicker: ;
     --pause-glow: ;
     --font-family: ;
+    --sidebar-bg-a: '';
+    --sidebar-bg-b: '';
+    --sidebar-bg-c: '';
+    --sidebar-bg: #d300748f;
+    --light-bg: #eae5d7;
+    --dark-bg: #343434;
+    --trans-light-bg: #ffffff8f;
+    --trans-dark-bg: #0000008f;
+    --table-rows: rgba(43, 0, 161, 0.151);
+    --whisper: #c48adbe1;
+    --text-dark: #181818;
+    --text-light: #eae5d7;
+
+    /* --font-primary: 'Roboto', sans-serif; */
+    --font-secondary: 'Roboto', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-fira: 'Fira Sans', sans-serif;
+    --font-work: 'Work Sans', sans-serif;
 }
 
 /*--------------------------------*/
 /* Left Panel Controls        */
 /*--------------------------------*/
-#controls li.scene-control.active{
+/* #controls li.scene-control.active{
 
-}
+} */
 /*--------------------------------*/
 /* shrink scene display */
 /*--------------------------------*/
@@ -417,10 +435,147 @@ li.folder.droptarget>header h3 i {
     color: var(--main-color);
     animation: var(--flicker);
     text-shadow: var(--pause-glow);
-
-
-
 }
+
+/* sidebar */
+.journal-sidebar .journalentry {
+    background-color: var(--sidebar-bg-b);
+}
+.sidebar-popout,
+#sidebar.app {
+  /* background: url('../image/bg/sidebar-10.png') repeat; */
+  /* background: var(--sidebar-color); */
+  background: url('../image/bg/sidebar-11.png') repeat, linear-gradient(
+      0deg,
+      var(--sidebar-bg-c) 0%,
+      var(--sidebar-bg-b) 46%,
+      var(--sidebar-bg-a) 100%
+    ),
+    url('../image/bg/sidebar-11.png') repeat;
+  background-color: var(--sidebar-bg);
+}
+.sidebar-popout li.compendium,
+#sidebar.app li.compendium{
+    background-color: var(--trans-dark-bg);
+}
+
+/* // chat style */
+
+.chat-message {
+  font-family: var(--font-primary) ;
+  font-weight: 500;
+  /* // background-color: var(--c-tb-04); */
+  background-color: var(--trans-light-bg);
+  background-image: none;
+}
+.chat-message .message-header {
+    color: var(--c-tb-07);
+  }
+  .chat-message .dice-result {
+    background-color: var(--c-tb-07);
+  }
+  .chat-message .chat-card {
+    background-color: var(--c-tb-07);
+  }
+  .chat-message .flavor-text {
+    width: 100%;
+    color: var(--text-dark);
+    background-color: var(--trans-light-bg);
+  }
+
+  .chat-message .message-sender,
+  .chat-message .flavor-text,
+  .chat-message .dice-flavor {
+    padding: 0 0.3em;
+  }
+  .chat-message h3,
+  .chat-message .flavor-text,
+  .chat-message .message-sender,
+  .chat-message .whisper-to{
+    font-weight: 600;
+  }
+  .chat-message .message-content {
+    
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    background-color: var(--trans-light-bg);
+  }
+
+.chat-message.whisper {
+  background-color: var(--whisper);
+}
+/* // dialog */
+
+  .dialog .window-header{
+    color: var(--text-light);
+    background-color: var(--main-color);
+  }
+  .dialog .window-content{
+    background: transparent;
+    background-color: var(--light-bg);
+  }
+
+/* // app window styling */
+
+  .app.window-app .window-header{
+    color: var(--text-light);
+    background-color: var(--main-color);
+  }
+  .app.window-app .window-content{
+    background: transparent;
+    background-color: var(--light-bg);
+  }
+
+.app.window-app.journal-entry .window-content{
+    background: transparent;
+}
+.app.window-app.journal-entry .journal-entry-content{
+    background: transparent;
+    background-color: var(--light-bg);
+}
+.app.window-app.Compendium-sidebar .window-content{
+    background-color: transparent;
+}
+.app.window-app.Compendium-sidebar li.document{
+    background-color: var(--trans-light-bg);
+    color: var(--text-dark);
+}
+/* // tables */
+table {
+  font-family: var(--font-fira);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: none;
+}
+table thead {
+  background-color: var(--main-color);
+}
+table tbody tr:nth-of-type(even) {
+  background-color: var(--table-rows);
+}
+table td {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* anim */
 
 @keyframes glowing {
     0% {
@@ -502,4 +657,10 @@ li.folder.droptarget>header h3 i {
             0 0 80px var(--pause-color);
     }
 }
-
+@keyframes rotation {
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}

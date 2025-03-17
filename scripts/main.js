@@ -6,8 +6,12 @@ const defColor = {
     darkAlt: '#372764',
     glow: ' #d20074',
     pause: '#05c2db',
-    side: 'rgba(46, 0, 51, 0.719)',
-    header: 'rgba(110, 1, 86, 0.5)'
+    side: 'rgba(46, 0, 51, 0.362)',//'rgba(46, 0, 51, 0.719)',
+    header: 'rgba(110, 1, 86, 0.5)',
+    whisper: '#b133e2da',
+    sidebarBgA: '#cf337ba0',
+    sidebarBgB: '#6b2780a0',
+    sidebarBgC: '#372764a0'
   },
   foundry: {
     main: '#ff6400',
@@ -22,7 +26,7 @@ const defColor = {
 
 //change foundry logo
 const logo = document.querySelector('#logo');
-logo.src = 'modules/rabidowlbear-foundry-recolor/image/fvtt-logo-b.webp';
+logo.src = 'modules/rabidowlbear-foundry-recolor/image/logo/fvtt-logo-b.webp';
 // console.log('logo', logo);
 //add text logo to pause div
 const pauseDiv = document.querySelector('#pause');
@@ -55,7 +59,7 @@ Hooks.once('ready', refresh);
 Hooks.on('renderPause', (app, html, options) => {
   if (options.paused) {
     //html.find("img")[0].src = (game.settings.get("custom-pause", "chooseFile"))
-    document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/80sring.webp';
+    document.querySelector('#pause img').src = 'modules/rabidowlbear-foundry-recolor/image/pause-ring/80sring.webp';
   }
 });
 
@@ -76,6 +80,9 @@ function refresh() {
     document.documentElement.style.setProperty('--pause-color', defColor.module.pause);
     document.documentElement.style.setProperty('--sidebar-color', defColor.module.side);
     document.documentElement.style.setProperty('--header-color', defColor.module.header);
+    document.documentElement.style.setProperty('--sidebar-bg-a', defColor.module.sidebarBgA);
+    document.documentElement.style.setProperty('--sidebar-bg-b', defColor.module.sidebarBgB);
+    document.documentElement.style.setProperty('--sidebar-bg-c', defColor.module.sidebarBgC);
     pauseToggle();
   }
 }
